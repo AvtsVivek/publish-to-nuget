@@ -19,7 +19,12 @@ I followed [this tutorial](https://www.freecodecamp.org/news/build-your-first-ja
 
 I did one more thing. I applied the version [parameter to the build here](https://github.com/AvtsVivek/publish-to-nuget/blob/5d85543777f8b600291063f98b8d12fac494b90e/index.js#L67).
 
+So the full command to build will now look like this
+
+    dotnet build -c Release src/Avts.DecoratorsForCcc/Avts.DecoratorsForCcc.Package/Avts.DecoratorsForCcc.Package.csproj -p:Version=0.0.25
+
 Now the dlls will also show the version of the nuget package.
+
 
 
 # Some Notes

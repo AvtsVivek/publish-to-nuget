@@ -144,10 +144,12 @@ class Action {
         console.log(`Version is: ${version}`)
 
         if (version === "") {
+            console.log(`Executing: dotnet build -c Release ${this.projectFile}`)
             this._executeInProcess(`dotnet build -c Release ${this.projectFile}`)
         }
         else {
             console.log(`Applying -p flag when building.`)
+            console.log(`Executing: dotnet build -c Release ${this.projectFile} -p:Version=${version}`)
             this._executeInProcess(`dotnet build -c Release ${this.projectFile} -p:Version=${version}`)
         }
 
