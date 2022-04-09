@@ -147,8 +147,8 @@ class Action {
             this._executeInProcess(`dotnet build -c Release ${this.projectFile}`)
         }
         else {
-            console.log(`Applying /p flag when building.`)
-            this._executeInProcess(`dotnet build -c Release ${this.projectFile} /p:Version=${version}`)
+            console.log(`Applying -p flag when building.`)
+            this._executeInProcess(`dotnet build -c Release ${this.projectFile} -p:Version=${version}`)
         }
 
         this._executeInProcess(`dotnet build -c Release ${this.projectFile}`)
