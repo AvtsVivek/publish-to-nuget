@@ -59,7 +59,7 @@ class Action {
 
         console.log(`Version is: ${version}`)
 
-        if (strValue === "") {
+        if (version === "") {
             this._executeInProcess(`dotnet build -c Release ${this.projectFile}`)
         }
         else {
