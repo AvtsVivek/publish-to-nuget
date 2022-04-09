@@ -67,8 +67,6 @@ class Action {
             this._executeInProcess(`dotnet build -c Release ${this.projectFile} -p:Version=${version}`)
         }
 
-        this._executeInProcess(`dotnet build -c Release ${this.projectFile}`)
-
         this._executeInProcess(`dotnet pack ${this.includeSymbols ? "--include-symbols -p:SymbolPackageFormat=snupkg" : ""} --no-build -c Release ${this.projectFile} -o .`)
 
         const packages = fs.readdirSync(".").filter(fn => fn.endsWith("nupkg"))
